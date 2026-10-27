@@ -1543,3 +1543,23 @@ button:focus-visible,
         border-radius: 14px;
     }
 }
+
+/* Ссылка для перехода к основному содержимому */
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1000;
+    padding: 12px 16px;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--text);
+    transform: translateY(-160%);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
