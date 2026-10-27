@@ -1,5 +1,6 @@
 
 
+
 /* =========================
    1. ФОРМА КОНТАКТОВ
 ========================= */
@@ -9,10 +10,11 @@ const status = document.getElementById("formStatus");
 const nameInput = document.getElementById("name");
 
 if (form && status && nameInput) {
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", async function(event) {
         event.preventDefault();
 
         const name = nameInput.value.trim();
+        const button = form.querySelector('button[type="submit"]');
 
         if (!name) {
             status.textContent = "Пожалуйста, введи своё имя.";
@@ -21,12 +23,43 @@ if (form && status && nameInput) {
             return;
         }
 
-        // Пока это демонстрационная форма: сообщения никуда не отправляются.
-        // Перед запуском нужно подключить реальный сервис обработки форм.
-        status.textContent =
-            `Спасибо, ${name}! Это демонстрационная форма: сообщение не отправлено.`;
+        status.textContent = "Отправляем сообщение...";
+        status.className = "form-status";
 
-        status.className = "form-status form-status-success";
+        if (button) button.disabled = true;
+
+        try {
+            const response = await fetch(
+                "https://formspree.io/f/xdeegzlp",
+                {
+                    method: "POST",
+                    body: new FormData(form),
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                }
+            );
+
+            if (response.ok) {
+                status.textContent =
+                    `Спасибо, ${name}! Сообщение успешно отправлено.`;
+                status.className =
+                    "form-status form-status-success";
+                form.reset();
+            } else {
+                status.textContent =
+                    "Не удалось отправить сообщение. Попробуй ещё раз.";
+                status.className =
+                    "form-status form-status-error";
+            }
+        } catch (error) {
+            status.textContent =
+                "Ошибка соединения. Проверь интернет и попробуй снова.";
+            status.className =
+                "form-status form-status-error";
+        } finally {
+            if (button) button.disabled = false;
+        }
     });
 }
 
