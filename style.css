@@ -1,4 +1,3 @@
-
 /* =========================
    1. ОСНОВНЫЕ НАСТРОЙКИ
 ========================= */
@@ -66,7 +65,6 @@ a {
     background: var(--accent);
     color: #0b0d12;
 }
-
 
 /* =========================
    2. ШАПКА И НАВИГАЦИЯ
@@ -146,7 +144,6 @@ a {
     background: var(--surface-hover);
 }
 
-
 /* =========================
    3. ПЕРВЫЙ ЭКРАН
 ========================= */
@@ -188,7 +185,6 @@ a {
     color: var(--muted);
     font-size: clamp(1rem, 2vw, 1.15rem);
 }
-
 
 /* =========================
    4. КНОПКИ
@@ -233,7 +229,6 @@ textarea:focus-visible {
     outline-offset: 4px;
 }
 
-
 /* =========================
    5. СЕКЦИИ САЙТА
 ========================= */
@@ -273,7 +268,6 @@ textarea:focus-visible {
     object-fit: cover;
     box-shadow: var(--shadow);
 }
-
 
 /* =========================
    6. КАРТОЧКИ ПРОЕКТОВ
@@ -340,20 +334,6 @@ textarea:focus-visible {
     margin-top: auto;
 }
 
-/* Детали проекта, если они используются в HTML */
-.project-details {
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-}
-
-.project-details[hidden] {
-    display: none;
-}
-
-
 /* =========================
    7. ФОРМА КОНТАКТОВ
 ========================= */
@@ -416,7 +396,6 @@ textarea:focus-visible {
     color: var(--accent);
 }
 
-
 /* =========================
    8. ПОДВАЛ
 ========================= */
@@ -431,7 +410,6 @@ footer {
 footer p {
     margin: 0;
 }
-
 
 /* =========================
    9. СВЕТЛАЯ ТЕМА
@@ -475,7 +453,6 @@ body.light .hero {
         var(--bg);
 }
 
-
 /* =========================
    10. АДАПТАЦИЯ ПОД ПЛАНШЕТЫ
 ========================= */
@@ -501,7 +478,6 @@ body.light .hero {
         padding: 85px 0 100px;
     }
 }
-
 
 /* =========================
    11. АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ
@@ -566,8 +542,63 @@ body.light .hero {
     .about-image {
         border-radius: 14px;
     }
-}
 
+    .project-cover {
+        height: 200px;
+    }
+
+    .js-code {
+        padding: 18px;
+    }
+
+    .interactive-demo {
+        padding: 28px 18px;
+    }
+
+    .design-artwork {
+        min-height: 280px;
+        padding: 18px;
+    }
+
+    .artwork-circle {
+        top: 55px;
+        right: 15px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .artwork-square {
+        top: 105px;
+        right: 90px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .artwork-title {
+        margin-top: 80px;
+        font-size: 2.6rem;
+    }
+
+    .palette-demo {
+        padding: 16px;
+    }
+
+    .palette-preview {
+        padding: 22px;
+    }
+
+    .palette-preview-shape {
+        top: 25px;
+        right: 20px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .character-info {
+        padding: 20px;
+        border-radius: 14px;
+    }
+}
 
 /* =========================
    12. УМЕНЬШЕННОЕ ДВИЖЕНИЕ
@@ -581,6 +612,20 @@ body.light .hero {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .browser-preview,
+    .code-preview,
+    .design-preview,
+    .palette-swatch,
+    .palette-preview,
+    .palette-preview-shape,
+    .palette-preview-tag {
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
     }
 }
 
@@ -790,20 +835,6 @@ body.light .hero {
 
 .card:hover .design-preview {
     transform: rotate(0) scale(1.05);
-}
-
-@media (max-width: 600px) {
-    .project-cover {
-        height: 200px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .browser-preview,
-    .code-preview,
-    .design-preview {
-        transition: none;
-    }
 }
 
 /* =========================
@@ -1036,35 +1067,6 @@ body.light .hero {
     margin-top: 15px;
 }
 
-@media (max-width: 650px) {
-    .project-hero {
-        padding-top: 60px;
-    }
-
-    .project-hero h1 {
-        letter-spacing: -1.5px;
-    }
-
-    .project-meta {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .case-preview {
-        min-height: 250px;
-        padding: 18px;
-        border-radius: 16px;
-    }
-
-    .case-feature-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .case-section {
-        padding: 45px 0;
-    }
-}
-
 /* =========================
    ПРОЕКТ 2: JAVASCRIPT
 ========================= */
@@ -1199,16 +1201,6 @@ body.light .hero {
 
 .demo-counter strong {
     color: var(--accent);
-}
-
-@media (max-width: 600px) {
-    .js-code {
-        padding: 18px;
-    }
-
-    .interactive-demo {
-        padding: 28px 18px;
-    }
 }
 
 /* =========================
@@ -1396,61 +1388,6 @@ body.light .hero {
     font-size: 0.9rem;
 }
 
-.palette-swatch:focus-visible {
-    outline: 2px solid var(--text);
-    outline-offset: 5px;
-}
-
-@media (max-width: 600px) {
-    .design-artwork {
-        min-height: 280px;
-        padding: 18px;
-    }
-
-    .artwork-circle {
-        top: 55px;
-        right: 15px;
-        width: 110px;
-        height: 110px;
-    }
-
-    .artwork-square {
-        top: 105px;
-        right: 90px;
-        width: 75px;
-        height: 75px;
-    }
-
-    .artwork-title {
-        margin-top: 80px;
-        font-size: 2.6rem;
-    }
-
-    .palette-demo {
-        padding: 16px;
-    }
-
-    .palette-preview {
-        padding: 22px;
-    }
-
-    .palette-preview-shape {
-        top: 25px;
-        right: 20px;
-        width: 65px;
-        height: 65px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .palette-swatch,
-    .palette-preview,
-    .palette-preview-shape,
-    .palette-preview-tag {
-        transition: none;
-    }
-}
-
 /* =========================
    ДОСТУПНОСТЬ И ФОКУС
 ========================= */
@@ -1462,11 +1399,6 @@ button:focus-visible,
     outline-offset: 4px;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
 /* Информация о персонаже */
 
 .character-info {
@@ -1493,12 +1425,6 @@ button:focus-visible,
     margin-bottom: 0;
 }
 
-@media (max-width: 600px) {
-    .character-info {
-        padding: 20px;
-        border-radius: 14px;
-    }
-}
 /* =========================
    МОЙ ЛИЧНЫЙ РАЗДЕЛ
 ========================= */
@@ -1539,19 +1465,6 @@ button:focus-visible,
     color: var(--muted);
 }
 
-@media (max-width: 650px) {
-    .my-about-content {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        padding: 20px;
-    }
-
-    .my-about-image {
-        max-width: 320px;
-        aspect-ratio: 4 / 3;
-    }
-}
-
 /* =========================
    СТАТУС ФОРМЫ
 ========================= */
@@ -1581,4 +1494,106 @@ button:focus-visible,
     border-color: rgba(255, 100, 120, 0.4);
     background: rgba(255, 100, 120, 0.1);
     color: #ff7888;
+}
+
+/* Дополнительные адаптивные правила для страниц проектов */
+
+@media (max-width: 650px) {
+    .project-hero {
+        padding-top: 60px;
+    }
+
+    .project-hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .project-meta {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .case-preview {
+        min-height: 250px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .case-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-section {
+        padding: 45px 0;
+    }
+
+    .my-about-content {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 20px;
+    }
+
+    .my-about-image {
+        max-width: 320px;
+        aspect-ratio: 4 / 3;
+    }
+}
+
+
+/* Повторные правила после основных стилей нужны для сохранения каскада CSS. */
+@media (max-width: 600px) {
+    .project-cover {
+        height: 200px;
+    }
+
+    .js-code {
+        padding: 18px;
+    }
+
+    .interactive-demo {
+        padding: 28px 18px;
+    }
+
+    .design-artwork {
+        min-height: 280px;
+        padding: 18px;
+    }
+
+    .artwork-circle {
+        top: 55px;
+        right: 15px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .artwork-square {
+        top: 105px;
+        right: 90px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .artwork-title {
+        margin-top: 80px;
+        font-size: 2.6rem;
+    }
+
+    .palette-demo {
+        padding: 16px;
+    }
+
+    .palette-preview {
+        padding: 22px;
+    }
+
+    .palette-preview-shape {
+        top: 25px;
+        right: 20px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .character-info {
+        padding: 20px;
+        border-radius: 14px;
+    }
 }
