@@ -542,62 +542,6 @@ body.light .hero {
     .about-image {
         border-radius: 14px;
     }
-
-    .project-cover {
-        height: 200px;
-    }
-
-    .js-code {
-        padding: 18px;
-    }
-
-    .interactive-demo {
-        padding: 28px 18px;
-    }
-
-    .design-artwork {
-        min-height: 280px;
-        padding: 18px;
-    }
-
-    .artwork-circle {
-        top: 55px;
-        right: 15px;
-        width: 110px;
-        height: 110px;
-    }
-
-    .artwork-square {
-        top: 105px;
-        right: 90px;
-        width: 75px;
-        height: 75px;
-    }
-
-    .artwork-title {
-        margin-top: 80px;
-        font-size: 2.6rem;
-    }
-
-    .palette-demo {
-        padding: 16px;
-    }
-
-    .palette-preview {
-        padding: 22px;
-    }
-
-    .palette-preview-shape {
-        top: 25px;
-        right: 20px;
-        width: 65px;
-        height: 65px;
-    }
-
-    .character-info {
-        padding: 20px;
-        border-radius: 14px;
-    }
 }
 
 /* =========================
@@ -1539,7 +1483,9 @@ button:focus-visible,
 }
 
 
-/* Повторные правила после основных стилей нужны для сохранения каскада CSS. */
+/* Адаптация небольших элементов страниц проектов.
+   Блок расположен после основных правил, чтобы мобильные значения
+   не перезаписывались стилями, объявленными выше. */
 @media (max-width: 600px) {
     .project-cover {
         height: 200px;
@@ -1596,9 +1542,4 @@ button:focus-visible,
         padding: 20px;
         border-radius: 14px;
     }
-}
-
-.palette-swatch:focus-visible {
-    outline: 2px solid var(--text);
-    outline-offset: 5px;
 }
