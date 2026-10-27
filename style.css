@@ -1597,3 +1597,8 @@ button:focus-visible,
         border-radius: 14px;
     }
 }
+
+.palette-swatch:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 5px;
+}
