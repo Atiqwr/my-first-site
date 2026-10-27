@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Веб-дизайн — Мой проект</title>
+    <meta name="description" content="Учебный проект по веб-дизайну, цветам, типографике и композиции.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="project3.js" defer></script>
+</head>
+
+<body>
+
+    <header class="project-header">
+        <nav class="navigation">
+            <a class="logo" href="index.html">Димон веб-разработка</a>
+
+            <a class="button project-back" href="index.html#projects">
+                ← Все проекты
+            </a>
+        </nav>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <p class="eyebrow">ПРОЕКТ 03 · WEB DESIGN</p>
+
+            <h1>Веб-дизайн</h1>
+
+            <p class="project-lead">
+                Исследую цвета, типографику и композицию,
+                чтобы создавать красивые, удобные
+                и понятные интерфейсы.
+            </p>
+
+            <div class="project-meta">
+                <div>
+                    <span>Категория</span>
+                    <strong>UI и визуальный дизайн</strong>
+                </div>
+
+                <div>
+                    <span>Технологии</span>
+                    <strong>HTML · CSS · JavaScript</strong>
+                </div>
+
+                <div>
+                    <span>Статус</span>
+                    <strong>Учебный проект</strong>
+                </div>
+            </div>
+
+            <div class="case-preview design-case-preview">
+                <div class="design-artwork">
+                    <div class="artwork-top">
+                        <span>CREATIVE STUDIO</span>
+                        <span>EST. 2026</span>
+                    </div>
+
+                    <div class="artwork-circle"></div>
+                    <div class="artwork-square"></div>
+
+                    <div class="artwork-title">
+                        <span>LESS, BUT</span>
+                        <strong>BETTER.</strong>
+                    </div>
+
+                    <div class="artwork-bottom">
+                        COLOR · TYPE · FORM
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">01 / ИДЕЯ</p>
+
+            <h2>Дизайн — это больше, чем цвета</h2>
+
+            <p>
+                Хороший интерфейс должен не только выглядеть
+                красиво, но и помогать человеку легко находить
+                нужную информацию и понимать, что делать дальше.
+            </p>
+
+            <p>
+                В этом проекте я изучаю визуальную иерархию,
+                сочетания цветов, работу со шрифтами,
+                свободное пространство и расположение элементов.
+            </p>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">02 / ОСНОВЫ ДИЗАЙНА</p>
+
+            <h2>Из чего складывается интерфейс</h2>
+
+            <div class="case-feature-grid">
+                <article class="case-feature">
+                    <span>01</span>
+                    <h3>Цвет</h3>
+                    <p>
+                        Палитра помогает передавать настроение
+                        и выделять важные элементы интерфейса.
+                    </p>
+                </article>
+
+                <article class="case-feature">
+                    <span>02</span>
+                    <h3>Типографика</h3>
+                    <p>
+                        Размеры, начертания и интервалы
+                        делают текст удобным для чтения.
+                    </p>
+                </article>
+
+                <article class="case-feature">
+                    <span>03</span>
+                    <h3>Композиция</h3>
+                    <p>
+                        Сетка, отступы и выравнивание
+                        создают порядок на странице.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">03 / ИНТЕРАКТИВНАЯ ПАЛИТРА</p>
+
+            <h2>Попробуй сочетания цветов</h2>
+
+            <p>
+                Выбери один из оттенков и посмотри,
+                как изменится оформление карточки.
+            </p>
+
+            <div class="palette-demo">
+                <div class="palette-swatches" aria-label="Выбери цвет">
+                    <button class="palette-swatch is-selected"
+                        type="button"
+                        data-color="#9b87ff"
+                        aria-label="Фиолетовый"
+                        aria-pressed="true"
+                        style="--swatch-color: #9b87ff"></button>
+
+                    <button class="palette-swatch"
+                        type="button"
+                        data-color="#43dfb2"
+                        aria-label="Бирюзовый"
+                        aria-pressed="false"
+                        style="--swatch-color: #43dfb2"></button>
+
+                    <button class="palette-swatch"
+                        type="button"
+                        data-color="#ff8caa"
+                        aria-label="Розовый"
+                        aria-pressed="false"
+                        style="--swatch-color: #ff8caa"></button>
+
+                    <button class="palette-swatch"
+                        type="button"
+                        data-color="#ffbd69"
+                        aria-label="Оранжевый"
+                        aria-pressed="false"
+                        style="--swatch-color: #ffbd69"></button>
+                </div>
+
+                <article class="palette-preview" id="palettePreview">
+                    <span class="palette-preview-label">YOUR NEXT IDEA</span>
+
+                    <div class="palette-preview-shape"></div>
+
+                    <h3>Создавай смело.</h3>
+
+                    <p>
+                        Цвет помогает сделать идею заметной.
+                    </p>
+
+                    <span class="palette-preview-tag" id="paletteColorName">
+                        Фиолетовый · #9B87FF
+                    </span>
+                </article>
+
+                <p class="palette-hint" aria-live="polite" id="paletteStatus">
+                    Выбран фиолетовый цвет.
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section case-result">
+            <p class="project-category">04 / РЕЗУЛЬТАТ</p>
+
+            <h2>От идеи к визуальному решению</h2>
+
+            <p>
+                Проект помогает мне применять базовые принципы
+                веб-дизайна на практике и понимать,
+                как визуальные решения влияют на восприятие сайта.
+            </p>
+
+            <div class="case-tags">
+                <span>UI-дизайн</span>
+                <span>Цветовые палитры</span>
+                <span>Типографика</span>
+                <span>CSS</span>
+                <span>Адаптивность</span>
+            </div>
+        </section>
+
+        <section class="case-footer">
+            <h2>Посмотри остальные проекты</h2>
+
+            <p>
+                Все мои учебные работы собраны в одном месте.
+            </p>
+
+            <a class="button" href="index.html#projects">
+                ← Вернуться к портфолио
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Димон веб-разработка · 2026</p>
+    </footer>
+
+</body>
+</html>

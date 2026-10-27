@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Учебный проект на JavaScript: интерактивная кнопка, анимация и счётчик нажатий.">
+
+    <title>Интерактивность — Мой проект</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="project2.js" defer></script>
+</head>
+
+<body>
+
+    <header class="project-header">
+        <nav class="navigation">
+            <a class="logo" href="index.html">Димон веб-разработка</a>
+
+            <a class="button project-back" href="index.html#projects">
+                ← Все проекты
+            </a>
+        </nav>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <p class="eyebrow">ПРОЕКТ 02 · JAVASCRIPT</p>
+
+            <h1>Интерактивность</h1>
+
+            <p class="project-lead">
+                Изучаю, как оживить сайт с помощью JavaScript:
+                реагировать на нажатия, менять оформление
+                и взаимодействовать с пользователем.
+            </p>
+
+            <div class="project-meta">
+                <div>
+                    <span>Категория</span>
+                    <strong>Интерактивный веб</strong>
+                </div>
+
+                <div>
+                    <span>Технологии</span>
+                    <strong>HTML · CSS · JS</strong>
+                </div>
+
+                <div>
+                    <span>Статус</span>
+                    <strong>Учебный проект</strong>
+                </div>
+            </div>
+
+            <div class="case-preview case-preview-js">
+                <div class="js-editor">
+                    <div class="js-editor-top">
+                        <div class="js-dots">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                        <span>script.js</span>
+                    </div>
+
+                    <div class="js-code">
+                        <p><span class="js-purple">const</span> website = {</p>
+                        <p>&nbsp;&nbsp;interactive: <span class="js-green">true</span>,</p>
+                        <p>&nbsp;&nbsp;creative: <span class="js-green">true</span></p>
+                        <p>};</p>
+                        <br>
+                        <p><span class="js-purple">function</span> <span class="js-yellow">makeMagic</span>() {</p>
+                        <p>&nbsp;&nbsp;website.<span class="js-blue">start</span>();</p>
+                        <p>}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">01 / ЗАДАЧА</p>
+
+            <h2>Сайт, который реагирует</h2>
+
+            <p>
+                Обычная веб-страница показывает информацию.
+                JavaScript позволяет ей реагировать на действия
+                посетителя и изменять содержимое без перезагрузки.
+            </p>
+
+            <p>
+                В рамках обучения я разбираюсь с обработчиками
+                событий, классами CSS, значениями полей ввода
+                и изменением элементов страницы.
+            </p>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">02 / НАВЫКИ</p>
+
+            <h2>Что я изучаю</h2>
+
+            <div class="case-feature-grid">
+                <article class="case-feature">
+                    <span>01</span>
+                    <h3>События</h3>
+                    <p>
+                        Реакция на нажатия кнопок и другие
+                        действия пользователя.
+                    </p>
+                </article>
+
+                <article class="case-feature">
+                    <span>02</span>
+                    <h3>Управление темой</h3>
+                    <p>
+                        Изменение классов элементов
+                        и переключение оформления.
+                    </p>
+                </article>
+
+                <article class="case-feature">
+                    <span>03</span>
+                    <h3>Работа с формами</h3>
+                    <p>
+                        Получение значений полей и отображение
+                        сообщений на странице.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <p class="project-category">03 / ДЕМО</p>
+
+            <h2>Попробуй сам</h2>
+
+            <p>
+                Нажми на кнопку, чтобы увидеть,
+                как JavaScript может изменять страницу.
+            </p>
+
+            <div class="interactive-demo" id="interactiveDemo">
+                <div class="demo-orb" id="demoOrb">JS</div>
+
+                <p class="demo-message" id="demoMessage" aria-live="polite">
+                    Готов к запуску?
+                </p>
+
+                <button class="button" id="demoButton" type="button">
+                    Запустить магию ✨
+                </button>
+
+                <p class="demo-counter">
+                    Нажатий: <strong id="demoCount">0</strong>
+                </p>
+            </div>
+        </section>
+
+        <section class="case-section case-result">
+            <p class="project-category">04 / РЕЗУЛЬТАТ</p>
+
+            <h2>От статичной страницы к интерактивной</h2>
+
+            <p>
+                Этот проект помогает мне понять основы JavaScript
+                и подготовиться к созданию более сложных интерфейсов:
+                интерактивных меню, галерей, форм и веб-приложений.
+            </p>
+
+            <div class="case-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>DOM</span>
+                <span>События</span>
+            </div>
+        </section>
+
+        <section class="case-footer">
+            <h2>Посмотри остальные проекты</h2>
+
+            <p>
+                Продолжаю изучать веб-разработку
+                и создавать новые работы.
+            </p>
+
+            <a class="button" href="index.html#projects">
+                ← Вернуться к портфолио
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Димон веб-разработка · 2026</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Димон — веб-разработка — портфолио</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="hero" id="home">
+        <nav class="navigation">
+            <a class="logo" href="#home">Димон — веб-разработка</a>
+
+            <div class="nav-links">
+                <a href="#my-about">Обо мне</a>
+                <a href="#about">Мой любимый персонаж</a>
+                <a href="#projects">Мои проекты</a>
+                <a href="#contact">Контакты</a>
+            </div>
+
+            <button id="themeButton" type="button">
+                ☀️ Светлая тема
+            </button>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">МОЁ ПОРТФОЛИО</p>
+
+
+            <h1>Привет! Я Димон — начинающий веб-разработчик</h1>
+
+            <p>
+                Я изучаю HTML, CSS и JavaScript, чтобы научиться создавать современные и интерактивные сайты.
+                В своём портфолио я показываю, как осваиваю вёрстку страниц, оформление интерфейсов и программирование
+                интерактивных элементов.
+            </p>
+
+
+            <a class="button" href="#projects">
+                Посмотреть проекты
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="my-about" class="section my-about">
+            <p class="project-category">НЕМНОГО ЛИЧНОГО</p>
+
+            <h2>Обо мне</h2>
+
+            <div class="my-about-content">
+                <img src="my-photo.jpg" alt="Моя фотография" class="my-about-image">
+
+                <div class="my-about-text">
+                    <h3>Привет! Рад знакомству 👋</h3>
+
+
+                    <p>
+                        Меня зовут Димон. Я начинающий веб-разработчик
+                        и учусь создавать сайты с помощью HTML, CSS и JavaScript.
+                    </p>
+
+                    <p>
+                        Мне интересны аниме и веб-дизайн. В процессе обучения
+                        я создаю собственные страницы, экспериментирую
+                        с оформлением и добавляю интерактивные элементы.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="about" class="section">
+            <h2>Коротко о моём любимом аниме персонаже</h2>
+
+            <img src="photo.jpg" alt="Махорага — персонаж аниме «Магическая битва»" class="about-image">
+
+            <!-- Информация о Махораге -->
+            <div class="character-info">
+                <p class="project-category">ПЕРСОНАЖ · МАГИЧЕСКАЯ БИТВА</p>
+
+                <h3>Махорага</h3>
+
+                <p>
+                    Махорага — могущественный сикигами из аниме
+                    «Магическая битва». Он известен своей способностью
+                    адаптироваться к различным атакам и техникам
+                    благодаря колесу над головой.
+                </p>
+
+                <p>
+                    Его отличительная черта — способность постепенно
+                    приспосабливаться к тому, с чем он сталкивается,
+                    что делает его одним из самых опасных сикигами.
+                </p>
+            </div>
+
+            <p>#МахорагаКрутой</p>
+        </section>
+
+
+        <section id="projects" class="section">
+            <h2>Мои проекты</h2>
+
+            <p>Познакомься с моими работами.</p>
+
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="project-cover cover-web">
+                        <span class="cover-label">01 / WEB</span>
+                        <div class="browser-preview">
+                            <div class="browser-top">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="preview-content">
+                                <div class="preview-line"></div>
+                                <div class="preview-line short"></div>
+                                <div class="preview-button"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="project-category">HTML · CSS</p>
+                    <h3>Первый сайт</h3>
+                    <p>
+                        Создал веб-страницу на HTML и CSS, оформил заголовки,
+                        текстовые блоки и навигацию. Добавил адаптивные стили
+                        для удобного просмотра сайта на телефонах и планшетах.
+                    </p>
+
+                    <a class="button project-button" href="project1.html">
+                        Открыть проект
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="project-cover cover-js">
+                        <span class="cover-label">02 / CODE</span>
+                        <div class="code-preview">
+                            <span>const</span> website = { }
+                            <br>
+                            <span>function</span> <b>create()</b> {
+                            <br>
+                            &nbsp;&nbsp;design.<i>magic</i>();
+                            <br>
+                            }
+                        </div>
+                    </div>
+
+                    <p class="project-category">JAVASCRIPT</p>
+                    <h3>Интерактивность</h3>
+                    <p>
+                        Создал интерактивную демонстрацию с кнопкой,
+                        анимацией элемента, сменой сообщения и счётчиком нажатий.
+                    </p>
+
+                    <a class="button project-button" href="project2.html">
+                        Открыть проект
+                    </a>
+                </article>
+
+                <article class="card">
+                    <div class="project-cover cover-design">
+                        <span class="cover-label">03 / DESIGN</span>
+                        <div class="design-preview">
+                            <div class="design-circle"></div>
+                            <div class="design-square"></div>
+                            <div class="design-type">
+                                <span>CREATIVE</span>
+                                <strong>DESIGN</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="project-category">UI · VISUAL</p>
+                    <h3>Веб-дизайн</h3>
+                    <p>
+                        Создал интерактивную цветовую палитру:
+                        выбор оттенка меняет оформление карточки и её подпись.
+                    </p>
+
+                    <a class="button project-button" href="project3.html">
+                        Открыть проект
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Связаться со мной</h2>
+
+            <p>Напиши сообщение через форму ниже. Сейчас это демонстрация: сообщения не отправляются.</p>
+
+            <form id="contactForm">
+                <label for="name">Твоё имя</label>
+                <input id="name" name="name" type="text" placeholder="Например, Алексей" required>
+
+                <label for="email">Электронная почта</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" placeholder="Напиши что-нибудь..." required></textarea>
+
+                <button class="button" type="submit">
+                    Отправить
+                </button>
+
+                <p id="formStatus" class="form-status" aria-live="polite" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Димон — веб-разработка · 2026</p>
+    </footer>
+
+</body>
+
+</html>
