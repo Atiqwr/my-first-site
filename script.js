@@ -123,37 +123,3 @@ if (themeButton) {
     });
 }
 
-
-/* =========================
-   3. РАСКРЫТИЕ ПОДРОБНОСТЕЙ
-========================= */
-
-const projectButtons = document.querySelectorAll(
-    '.project-button[aria-controls]'
-);
-
-projectButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-        const detailsId =
-            button.getAttribute("aria-controls");
-
-        const details =
-            document.getElementById(detailsId);
-
-        if (!details) return;
-
-        const isOpen =
-            button.getAttribute("aria-expanded") === "true";
-
-        details.hidden = isOpen;
-
-        button.setAttribute(
-            "aria-expanded",
-            String(!isOpen)
-        );
-
-        button.textContent = isOpen
-            ? "Подробнее"
-            : "Скрыть";
-    });
-});
