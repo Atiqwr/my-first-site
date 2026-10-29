@@ -10,11 +10,10 @@ const status = document.getElementById("formStatus");
 const nameInput = document.getElementById("name");
 
 if (form && status && nameInput) {
-    form.addEventListener("submit", async function(event) {
+    form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const name = nameInput.value.trim();
-        const button = form.querySelector('button[type="submit"]');
 
         if (!name) {
             status.textContent = "Пожалуйста, введи своё имя.";
@@ -23,45 +22,13 @@ if (form && status && nameInput) {
             return;
         }
 
-        status.textContent = "Отправляем сообщение...";
+        status.textContent =
+            `Спасибо, ${name}! Это демонстрация: сообщение не отправлено.`;
         status.className = "form-status";
-
-        if (button) button.disabled = true;
-
-        try {
-            const response = await fetch(
-                "https://formspree.io/f/xdeegzlp",
-                {
-                    method: "POST",
-                    body: new FormData(form),
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                }
-            );
-
-            if (response.ok) {
-                status.textContent =
-                    `Спасибо, ${name}! Сообщение успешно отправлено.`;
-                status.className =
-                    "form-status form-status-success";
-                form.reset();
-            } else {
-                status.textContent =
-                    "Не удалось отправить сообщение. Попробуй ещё раз.";
-                status.className =
-                    "form-status form-status-error";
-            }
-        } catch (error) {
-            status.textContent =
-                "Ошибка соединения. Проверь интернет и попробуй снова.";
-            status.className =
-                "form-status form-status-error";
-        } finally {
-            if (button) button.disabled = false;
-        }
+        form.reset();
     });
 }
+
 
 
 
