@@ -6,29 +6,25 @@
 ========================= */
 
 const form = document.getElementById("contactForm");
-const status = document.getElementById("formStatus");
 const nameInput = document.getElementById("name");
 
-if (form && status && nameInput) {
+if (form && nameInput) {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         const name = nameInput.value.trim();
 
         if (!name) {
-            status.textContent = "Пожалуйста, введи своё имя.";
-            status.className = "form-status form-status-error";
+            alert("Пожалуйста, введи своё имя.");
             nameInput.focus();
             return;
         }
 
-        status.textContent =
-            `Спасибо, ${name}! Это демонстрация: сообщение не отправлено.`;
-        status.className = "form-status";
+        alert(`Спасибо, ${name}! Форма отправлена.`);
+
         form.reset();
     });
 }
-
 
 
 
